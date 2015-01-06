@@ -1,0 +1,20 @@
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+
+
+
+@import 'bootstrap';
+
+
+body {
+  padding-top: 60px;
+}
+
+.footer {
+	margin-top: 50px;
+	color: $gray;
+	a{
+		color: $gray;
+	}
+}
