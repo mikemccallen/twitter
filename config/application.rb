@@ -25,7 +25,7 @@ module Twitter
 
 # Required for devide on Heroku
      config.assets.initialize_on_precompile = false
-     config.active_record.whitelist_attributes = true 
+     config.active_record.whitelist_attributes = false
 
   end
 end
