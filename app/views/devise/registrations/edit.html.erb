@@ -1,0 +1,28 @@
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+<%= f.input :name, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
+<%= f.input :email, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.input :password, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
+    <%= f.input :password_confirmation, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
+    <%= f.input :current_password, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
+  </div>
+
+  <div class="form_actions">
+    <%= f.submit "Update", class: "btn btn-primary btn-success" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>

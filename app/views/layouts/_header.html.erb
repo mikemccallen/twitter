@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Mccallen's Group</a>
+      <%= link_to "Mccallen's Group", root_path, class: "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -26,7 +26,13 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a <%= link_to "Login", new_user_session_path %> </a></li
+      <% if user_signed_in?%>
+          <li><a <%= link_to "Edit Profile", edit_user_registration_path %> </a></li
+          <br>
+           <li><a <%= link_to "Logout", destroy_user_session_path, method: :delete %> </a></li
+           <% else %>
+            <li><a <%= link_to "Login", new_user_session_path %> </a></li
+         <% end %>
           </ul>
         </li>
       </ul>

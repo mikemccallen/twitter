@@ -1,11 +1,18 @@
-<div class="jumbotron">
-	<h1>Welcome to Mccallen's Group</h1>
-	<p>
-		You found the home page for the
-		<%= link_to "One Month Rails", "http://onemonthrails.com" %>
-		 application.
-	</p>
-	<p>
-		<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-lg btn btn-success" %>
-	</p>
-</div>
+<% if user_signed_in?%>
+			<h1>Welcome to Mccallen's Group</h1>
+			<h1>You are Logged in</h1>
+<% else %>
+			<div class="jumbotron">
+				<h1>Welcome to Mccallen's Group</h1>
+				<p>
+					You found the home page for the
+					<%= link_to "One Month Rails", "http://onemonthrails.com" %>
+					 application.
+				</p>
+				<p>
+					<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-lg btn btn-success" %>
+				</p>
+			</div>
+
+<% end %>
+
