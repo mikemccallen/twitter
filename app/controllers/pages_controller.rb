@@ -1,11 +1,7 @@
 class PagesController < ApplicationController
-  def create
-    Person.create(person_params)
+  def home
   end
 
-  private
-
-  def person_params
-    params.require(:person).permit(:name, :age)
+  def action
   end
 end
