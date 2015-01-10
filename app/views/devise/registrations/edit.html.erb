@@ -5,10 +5,6 @@
 
 <%= f.input :email, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
   <div class="field">
     <%= f.input :password, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
     <%= f.input :password_confirmation, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
