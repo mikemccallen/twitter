@@ -1,0 +1,10 @@
+<%= simple_form_for(@pin, html: {class: "form-horizontal"}) do |f| %>
+  <%= f.error_notification %>
+
+    <%= f.input :description, as: :text, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
+
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary btn btn-success" %>
+  </div>
+<% end %>
