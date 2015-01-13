@@ -1,4 +1,5 @@
 class PinsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -13,15 +14,16 @@ class PinsController < ApplicationController
   end
 
   def new
-    @pin = Pin.new
+    @pin = current_user.pins.new
     respond_with(@pin)
   end
 
   def edit
+    @pin = current_user.pins.find(params[:id])
   end
 
   def create
-    @pin = Pin.new(pin_params)
+    @pin = current_user.pins.new(pin_params)
     @pin.save
     respond_with(@pin)
   end
@@ -32,6 +34,7 @@ class PinsController < ApplicationController
   end
 
   def destroy
+    @pin = current_user.pins.find(params[:id])
     @pin.destroy
     respond_with(@pin)
   end
