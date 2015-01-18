@@ -23,6 +23,7 @@ class PinsController < ApplicationController
   end
 
   def create
+    @user = User.create(params[:user])
     @pin = current_user.pins.new(pin_params)
     @pin.save
     respond_with(@pin)
@@ -45,6 +46,6 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image)
     end
 end
