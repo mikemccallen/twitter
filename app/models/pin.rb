@@ -1,5 +1,5 @@
 class Pin < ActiveRecord::Base
-has_attached_file :image, :styles => { :medium => "300x300>" },
+has_attached_file :image, :styles => { :medium => "700x800>" },
 								  :url  => "/assets/products/:id/:style/:basename.:extension",
                   :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension"
 

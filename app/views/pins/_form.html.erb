@@ -3,7 +3,7 @@
   <%= f.full_error :image_file_size, class: "alert alert-error" %>
 
 
-  	<%= f.input :image, label: "Upload an image" %>
+  	<%= f.input :image, label: "Upload an image",:input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
     <%= f.input :description, as: :text, :input_html => {:maxlength =>50,:style=> 'width: 250px'}%>
 
 
