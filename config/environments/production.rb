@@ -79,5 +79,6 @@ Rails.application.configure do
 
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  Paperclip.options.merge!(:command_path => 'C:\ImageMagick')
+  Paperclip.options[:image_magick_path] = 'C:\ImageMagick'
+  Paperclip.options[:command_path] = 'C:\ImageMagick'
 end
