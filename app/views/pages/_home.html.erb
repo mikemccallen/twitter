@@ -1,7 +1,4 @@
-<% if user_signed_in?%>
-			<h1>Welcome to Mccallen's Group</h1>
-			<h1>You are Logged in</h1>
-<% else %>
+<% unless user_signed_in? %>
 			<div class="jumbotron">
 				<h1>Welcome to Mccallen's Group</h1>
 				<p>
