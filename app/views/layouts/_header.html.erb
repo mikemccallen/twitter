@@ -27,6 +27,8 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in?%>
+          <li><a <%= link_to "Add +", new_pin_path %> </a></li
+          <br>
           <li><a <%= link_to "Edit Profile", edit_user_registration_path %> </a></li
           <br>
            <li><a <%= link_to "Logout", destroy_user_session_path, method: :delete %> </a></li
