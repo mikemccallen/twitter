@@ -9,7 +9,6 @@ gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 4.2"
 gem 'mini_magick'
-gem "rmagick", "2.12.0", :require => 'RMagick'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 
