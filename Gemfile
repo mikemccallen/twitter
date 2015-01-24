@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 4.2"
+gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.3.1'
 
